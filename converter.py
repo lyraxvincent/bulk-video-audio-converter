@@ -15,4 +15,4 @@ else:
 for i in pathlist:
     vclip = VideoFileClip(os.path.join(dirpath, pathlist[0]))
     audioclip = vclip.audio
-    audioclip.write_audiofile('{}.mp3'.format(os.path.join(audiopath, i)))
+    audioclip.write_audiofile('{}.mp3'.format(os.path.join(audiopath, i.split('.mp4')[0]))) # Removing video extension to replace it with audio extension
