@@ -12,7 +12,7 @@ elif audiopath_prompt == 'N'.lower():
 else:
     print("Invalid entry.")
 
-for i in pathlist:
-    vclip = VideoFileClip(os.path.join(dirpath, pathlist[0]))
+for vid in pathlist:
+    vclip = VideoFileClip(os.path.join(dirpath, vid))
     audioclip = vclip.audio
-    audioclip.write_audiofile('{}.mp3'.format(os.path.join(audiopath, i.split('.mp4')[0]))) # Removing video extension to replace it with audio extension
+    audioclip.write_audiofile('{}.mp3'.format(os.path.join(audiopath, vid.split('.mp4')[0]))) # Removing video extension to replace it with audio extension
