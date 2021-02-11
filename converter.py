@@ -3,11 +3,11 @@ from moviepy.editor import *
 
 dirpath = str(input("Enter the target directory path: "))
 pathlist = [vid for vid in os.listdir(dirpath)]
-fileFormats=["mp4","mov","wmv","avi","mkv"]             #Enter your audio formats here
+fileFormats=["mp4","mov","wmv","avi","mkv"]             #Enter your video formats here
 files=[]
 for i in pathlist:
     try:
-        if(i.split(".")[1] in fileFormats):
+        if(i.split(".")[-1] in fileFormats):
             files.append(i)
     except:
         continue
