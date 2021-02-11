@@ -11,7 +11,6 @@ for i in pathlist:
             files.append(i)
     except:
         continue
-print(files)
 
 audiopath_prompt = str(input("Do you wish to use the same directory for the audiofiles? [Y/n]: "))
 if audiopath_prompt == 'Y' or audiopath_prompt == 'y':
