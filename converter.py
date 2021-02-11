@@ -3,7 +3,7 @@ from moviepy.editor import *
 
 dirpath = str(input("Enter the target directory path: "))
 pathlist = [vid for vid in os.listdir(dirpath)]
-fileFormats=["mp4","mov","wmv","avi","mkv"]             #Enter your video formats here
+fileFormats=["mp4", "mov", "wmv", "avi", "mkv", "webm"]     #Enter your video formats here
 files=[]
 for i in pathlist:
     try:
@@ -24,4 +24,4 @@ else:
 for vid in files:
     vclip = VideoFileClip(os.path.join(dirpath, vid))
     audioclip = vclip.audio
-    audioclip.write_audiofile('{}.mp3'.format(os.path.join(audiopath, vid.split('.')[0]))) # Removing video extension to replace it with audio extension
+    audioclip.write_audiofile('{}.mp3'.format(os.path.join(audiopath, ''.join(vid.split('.')[0:-1])))) # Removing video extension to replace it with audio extension
