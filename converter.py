@@ -12,10 +12,10 @@ for i in pathlist:
     except:
         continue
 
-audiopath_prompt = str(input("Do you wish to use the same directory for the audiofiles? [Y/n]: "))
-if audiopath_prompt == 'Y' or audiopath_prompt == 'y':
+audiopath_prompt = str(input("Do you wish to use the same directory for the audiofiles? [Y/n]: ")).upper()
+if audiopath_prompt == 'Y':
     audiopath = dirpath
-elif audiopath_prompt == 'N' or audiopath_prompt == 'n':
+elif audiopath_prompt == 'N':
     audiopath = str(input("Enter destination folder for the audio files: "))
 else:
     print("Invalid entry.")
